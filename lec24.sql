@@ -47,6 +47,8 @@ select distinct employees.department
 from employees left join department
 on employees.department=department.department
 where department.department is NULL
+--the last condition is deciding it all as entries unique to employees table
+--will be null in departments table
 
 --return only those departments existing in the departments table
 select distinct department.department

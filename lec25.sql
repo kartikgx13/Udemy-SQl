@@ -6,7 +6,7 @@ union
 select department
 from department
 --the union clause will stack the data of the queries on top of each other
---and remove any duplicates if present
+--and remove any duplicates if present similar to union operation of sets
 
 select department
 from employees
@@ -26,7 +26,7 @@ from department
 --of the stacking columns should also be same
 
 --another thing we need to note is that the whole expression 
---with union is a single query and if we use group by or oder by 
+--with union is a single query and if we use group by or order by 
 --in between it wont work
 
 --except operator
@@ -37,6 +37,9 @@ select department
 from department
 --this will give us entries exclusive to employees table
 --and we can do vice-versa
+--this serves as an alternative to the joins query which we wrote that is the outer one
+
+
 select department
 from department
 except
@@ -50,6 +53,7 @@ group by department
 union all
 select 'total',count(*)
 from employees
+--here we only worked with the employees table
 
 
 
