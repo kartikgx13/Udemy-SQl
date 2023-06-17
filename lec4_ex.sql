@@ -20,7 +20,7 @@ where student_name like '%ch%' or student_name like '%%nd'
 select student_name
 from students
 where (student_name like '%ae%' or student_name like '%ph%')
-or not age=19
+or age!=19
 
 --Write a query that lists the names of students sorted by their age
 --from largest to smallest.

@@ -14,6 +14,7 @@ from employees
 group by department
 
 --getting domain name and count of people with same domains
+--similar to first_name question
 select substring(email from position('@' in email)+1) as "email_domain",count(*)
 from employees
 where email is not NULL

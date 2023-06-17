@@ -14,7 +14,7 @@ order by salary desc
 --suppose we want a distinct departments list
 select distinct department
 from employees
-order by 1
+order by 1 --will order the column in ascending order
 limit 10
 
 --alternate to limit
@@ -28,6 +28,7 @@ fetch first 10 rows only
 
 --we can also rename the columns such as 
 --this is useful in reporting things
+--will also work without typing in 'as'
 select distinct department as sorted_dept
 from employees
 order by 1

@@ -16,13 +16,14 @@ select trim('    hi there    ')
 select length('hello there     ')
 
 --conactenating values of 2 columns
+--we can also use the concat function here
 select first_name || last_name
 from employees
 
 --formatting it a bit more
 select first_name ||' '|| last_name as full_name,department
 from employees
---while remaining keep in mind that if we use underscore in name then
+--keep in mind that if we use underscore in name then
 --no need to use double quotes and if we want to then we will have to
 --use the double quotes as we have did in this next example
 

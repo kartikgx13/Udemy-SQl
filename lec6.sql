@@ -7,6 +7,7 @@ select substring('This is test data' from 9 for 5)
 --and the for clause will denote the length of the substring
 
 --replace function
+--replace(column_name,old_value,new_value)
 select department,replace(department,'Clothing','Attire') as "Modified data"
 from department
 
@@ -17,6 +18,7 @@ from department
 --create a new column
 
 --position function
+--will return an index value which can then be used in the substring method
 select position('@' in email)
 from employees
 
@@ -32,6 +34,7 @@ select email,substring(email from position('@' in email)+1) as "Domain"
 from employees
 
 --handling null values
+--coalesce(column_name,value_to_replace_with)
 select coalesce(email,'NONE') as "final"
 from employees
 --so all the null values will replaced by the word "NONE"

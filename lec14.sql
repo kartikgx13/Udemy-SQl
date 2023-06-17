@@ -10,9 +10,10 @@ select *
 from (select * from employees where salary > 150000) a
 --here we give an alias named 'a' to refer to the source data
 --because here the source is not an actual column it just looks like
---a column 
+--a column this is required mainly in the from clause
 
 --another use of the above alias
+--so here only the first_name and salary will be displayed
 select a.first_name,a.salary
 from (select * from employees where salary > 150000) a
 

@@ -9,6 +9,7 @@ from professors
 --Write a SQL query against the professors table that would
 --return the following result:
 --"It is false that professor Chong is highly paid"
+--here we made use of the boolean expression
 select 'It is '||(salary>95000)||' that professor '||last_name||' is highly paid'
 from professors
 
@@ -22,7 +23,7 @@ from professors
 --the professors table excluding the professor named 'Wilson'.
 select min(salary),max(salary)
 from professors
-where not last_name='Wilson'
+where last_name!='Wilson'
 
 --Write a query that will display the hire date of the professor 
 --that has been teaching the longest.

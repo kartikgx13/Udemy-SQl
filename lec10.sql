@@ -1,10 +1,10 @@
 --getting salary per department
 select department,sum(salary)
 from employees
-where 1=1
 group by department
 
 --getting the total no. of people per department
+--along with this min max and avg salary will also be displayed
 select department,count(employee_id) as "Total_count",
 round(avg(salary)) as "Average_salary",
 max(salary) as "Max_salary",
@@ -24,7 +24,7 @@ order by count(*) desc
 --to get departments with more than 35 employees
 --here the having clause will be used to sepearte group data
 --we will have to use the having clause because we cannot use the
---where clause here
+--where clause here after a group by clause
 select department,count(*) as "Total_count"
 from employees 
 group by department
