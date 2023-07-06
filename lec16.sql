@@ -10,6 +10,10 @@ where region_id in (select region_id from regions where country='United States')
 --as well as the having clause with group by
 select region_id,* from employees
 where region_id > all(select region_id from regions where country='United States')
+--here the all operator will check wether the condition is met for all the values returned by
+--the subqueries
+--it is preferred to use all instead of any
+
 
 select region_id,* from employees
 where region_id > any(select region_id from regions where country='United States')

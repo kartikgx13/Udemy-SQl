@@ -42,6 +42,26 @@ group by state
 order by "Total sum" desc
 limit 1
 
+--very imp note
+--we cannot use aggregrate functions such as count sum min max in where clause
+--because where condition is use to filter out records and not aggregrated data
+--to use aggregrates conditionally we can use having clause after the group by clause
 
 
+select first_name,count(*)
+from employees
+group by first_name
+having count(*)>=2
 
+select department
+from employees
+group by department
+
+select substring(email,from position('@')) as domain,count(*)
+from employees
+group by domain
+
+select gender,region_id,min(salary),max(salary),avg(salary)
+from employees
+group by gender,region_id
+order by gender,region_id

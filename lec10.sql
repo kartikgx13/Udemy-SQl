@@ -2,6 +2,8 @@
 select department,sum(salary)
 from employees
 group by department
+--we can also add a where clause such as where 1=1 so this condition
+--will always be true hence all records will be returned
 
 --getting the total no. of people per department
 --along with this min max and avg salary will also be displayed
